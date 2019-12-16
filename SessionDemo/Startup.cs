@@ -56,6 +56,8 @@ namespace SessionDemo
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
+            app.UseSession();
+
             app.UseMvc();
         }
     }
