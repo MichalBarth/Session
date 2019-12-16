@@ -29,7 +29,7 @@ namespace SessionDemo.Services
             if (_listOfBaskets.Count > 0) return;
             _listOfBaskets = _session.Get<List<Basket>>("datakosik");
 
-            if (_listOfBaskets == null) _listOfBaskets =;
+            if (_listOfBaskets == null) _listOfBaskets = new List<Basket>();
         }
 
         public void AddItem(Basket basket)
