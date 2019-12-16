@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h2>List of Items</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(i => i.AllItems[0].Description)</th>
+            <th>@Html.DisplayNameFor(i => i.AllItems[0].Price)</th>
+            <th>@Html.DisplayNameFor(i => i.AllItems[0].PriceWithVat)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AllItems)
+        {
+            <tr>
+                <td title="@item.Id"> @item.Description</td>
+                <td>@item.Price</td>
+                <td>@item.PriceWithVat</td>
+            </tr>
+        }
+    </tbody>
+</table>

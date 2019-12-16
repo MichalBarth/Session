@@ -1,0 +1,28 @@
+﻿@page
+@model SessionDemo.InsertModel
+@{
+    ViewData["Title"] = "Insert";
+}
+
+<h2>Insert new item</h2>
+<form method="post">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label asp-for="BasketForm.Price"></label>
+                <input asp-for="BasketForm.Price" class="form-control" />
+                <span asp-validation-for="BasketForm.Price" class="form-text text-danger"></span>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label asp-for="BasketForm.Description"></label>
+                <input asp-for="BasketForm.Description" class="form-control"></input>
+                <span asp-validation-for="BasketForm.Description" class="form-text text-danger"></span>
+            </div>
+        </div>
+        <div class="col-sm-2 align-self-center flex-grow-1">
+            <button type="submit" class="btn btn-primary w-100">Insert item</button>
+        </div>
+    </div>
+</form>
